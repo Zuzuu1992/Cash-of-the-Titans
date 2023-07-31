@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #9c75b4;
+  font-family: "DM Sans", sans-serif;
+}
+
+#game-window {
+  position: relative;
+  width: 50%;
+  height: 450px;
+  border: 19px solid #efc31e;
+  background-color: #d9dcef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 100px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+h2 {
+  color: #1f0202;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  color: #e84325;
+}
+
+.avatar {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 120px;
+}
+
+.opponents-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0px;
+}
+
+.avatar.fighting {
+  animation: shake 0.5s linear infinite;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25%,
+  75% {
+    transform: translate(-5px, 0);
+  }
+  50% {
+    transform: translate(5px, 0);
+  }
+}
+
+.power-indicator {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  transform: translateX(-50%);
+  background-color: #e84325;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+#ui-elements {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  margin: 0 5px;
+  border-radius: 4px;
+  padding: 5px 22px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+label {
+  color: #1f0202;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+}
+
+#balance {
+  color: #e12e33;
+}
+
+input {
+  margin: 0 5px;
+  border-radius: 4px;
+  padding: 5px 5px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+}
+
+.opponent {
+  cursor: pointer;
+}
